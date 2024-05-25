@@ -7,8 +7,11 @@ GET http://localhost:5500/
 ### GET pessoas
 GET http://localhost:5500/api/v1/pessoas
 
+### GET pessoa por id
+GET http://localhost:5500/api/v1/pessoas/CZyX79PkOll4L3CQ
+
 ### POST pessoas
-POST http://localhost:5500/api/v1/pessoas
+POST http://localhost:5500/api/v1/pessoas/
 Content-Type: application/json
 
 {
@@ -21,6 +24,24 @@ Content-Type: application/json
     "amigos"
   ]
 }
+
+### PUT pessoas
+PUT http://localhost:5500/api/v1/pessoas/CZyX79PkOll4L3CQ
+Content-Type: application/json
+
+{
+  "nome": "Maria MacQueen",
+  "email": "maria@gmail.com",
+  "telefone": "001-124-2122",
+  "organizacao": null,
+  "tags": [
+    "cinema",
+    "amigos"
+  ]
+}
+
+### DELETE pessoa
+DELETE http://localhost:5500/api/v1/pessoas/Ybq5xcrTODPWhpCr
 
 ### GET organizacoes
 GET http://localhost:5500/api/v1/organizacoes

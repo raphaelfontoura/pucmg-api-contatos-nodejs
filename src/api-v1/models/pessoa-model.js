@@ -25,17 +25,22 @@ function lista(params, callback) {
   
 }
 
-function altera() {
-
+function altera(id, obj, callback) {
+  db.pessoasDB.update({ _id: id }, obj, {}, callback)
 }
 
-function exclui() {
+function exclui(obj, callback) {
+  db.pessoasDB.remove({ _id :obj } , {}, callback)
+}
 
+function getById(id, callback) {
+  db.pessoasDB.findOne({ _id: id }, callback)
 }
 
 export default {
   insere,
   lista,
   altera,
-  exclui
+  exclui,
+  getById
 }
